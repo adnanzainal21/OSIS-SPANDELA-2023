@@ -1,0 +1,33 @@
+.navbar {
+  background-color: #154c79;
+}
+
+.jumbotron {
+  padding-top: 6rem;
+  background-color: #154c79;
+}
+
+#About {
+  background-color: #ffffff;
+  text-decoration: none;
+}
+
+#event {
+  background-color: #154c79;
+}
+
+#contact {
+  background-color: #ffffff;
+}
+
+section {
+  padding-top: 5rem;
+}
+
+section a {
+  text-decoration: none;
+}
+
+jumbotron text-center a {
+  text-decoration: none;
+}
