@@ -1,0 +1,557 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+	text-decoration: none;
+	font-family: 'Quicksand', sans-serif;
+}
+
+:root{
+	--button-primary: #FFF512;
+	--button-secondary: #FFDE40;
+	--background-primary:  #333;
+	--background-secondary:  #1E1E1D;
+}
+
+body{
+	position: relative;
+	overflow-x: hidden;
+	width: 100%;
+}
+
+nav{
+	background: linear-gradient(180deg, #090907 0%, rgba(255, 255, 255, 0) 83.16%);
+	position: fixed;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 23px 50px;
+	z-index: 100;
+}
+
+nav img{
+	width: 50px;
+}
+
+.nav-kanan ul{
+	display: flex;
+}
+
+.nav-kanan ul li{
+	margin-left: 40px;
+}
+
+.nav-kanan ul li iconify-icon{
+	font-size: 1.5em;
+	color:  white;
+}
+
+header{
+	position: relative;
+	z-index: 1;
+	width: 100vw;
+	height: 100vh;
+	overflow-y: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+header video{
+	width: 100vw;
+	position: absolute;
+	z-index: -1;
+}
+
+header .judul{
+	width: 100vw;
+	text-align: center;
+}
+
+header .judul img{
+	width: 70vw;
+}
+
+header .gradasi{
+	background: linear-gradient(0deg, black 17.39%, rgba(0, 0, 0, 0) 57.75%);
+	width: 100%;
+	height: 200px;
+	position: absolute;
+	bottom: 0;
+}
+
+header .nav-header{
+	position: absolute;
+	bottom: 5%;
+	z-index: 2;
+	width: 100%;
+	/*background-color: black;*/
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap:  25px;
+}
+
+header a{
+	background: transparent;
+	padding: 5px 10px;
+	color:  white;
+	font-size: 1em;
+	overflow: hidden;
+	position: relative;
+	transition: .3s;
+}
+
+header a:hover{
+	transform: translateY(-5px);
+}
+
+header a.img img{
+	width: 50px;
+	font-weight: bold;
+}
+
+.hero{
+	
+	color:  white;
+}
+
+.event, .about{
+	padding: 30px 50px;
+	background-color: black;
+}
+
+.hero .event .judul{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 50px;
+}
+
+.hero .event .judul-text{
+	font-size: 5em;
+	color:  #FFDE40;
+	font-weight: bold;
+	font-family: 'Poppins', sans-serif;
+	letter-spacing: 15%;
+}
+
+.hero .event .judul a{
+	background: transparent;
+	border: 1px solid var(--button-secondary);
+	border-radius: 10px;
+	color: var(--button-secondary);
+	padding: 10px 50px ;
+}
+
+.event content{
+	display: flex;
+	column-gap: 2em;
+}
+
+.event content .content{
+	width: 400px;
+	height: 190px;
+	position: relative;
+	background-size: cover;
+	background-position: center;
+	z-index: 2;
+	overflow: hidden;
+	border-radius: 10px;
+}
+
+
+
+.content a{
+	color:  white;
+}
+
+.content .gambar{
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: center;
+	transform: scale(1.0);
+	transition: .3s;
+}
+
+.content:hover .gambar{
+	transform: scale(1.02);
+}
+
+.content-1 .gambar{
+	background-image: url(../img/tariansltt.png);
+}
+
+.content-2 .gambar{
+	background-image: url(../img/kv3.jpg);
+}
+
+.content-3 .gambar{
+	background-image: url(../img/kv4.jpg);
+}
+
+.content-4 .gambar{
+	background-image: url(../img/kv.jpg);
+}
+
+
+.content span{
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	background: rgba(9, 9, 7, 0.7);
+	backdrop-filter: blur(6px);
+	padding:  10px;
+}
+
+.content img{
+	width: 100%;
+}
+
+.about{
+	background-color: var(--background-secondary);
+	display: flex;
+	gap: 4em;
+	padding-bottom: 70px;
+}
+
+.about .deskripsi .judul{
+	font-size: 5em;
+	font-weight: bold;
+	color:  var(--button-secondary);
+	margin-bottom: 50px;
+
+	font-family: 'Poppins', sans-serif;
+	letter-spacing: 15%;
+}
+
+.about p{
+	font-weight: lighter;
+	font-size: 1em;
+	margin-bottom: 50px;
+}
+
+
+
+
+.about .deskripsi a{
+	color: var(--button-secondary);
+	width: fit-content;
+	/*border-left: 2px solid var(--button-primary);*/
+	padding: 10px 20px;
+	position: relative;
+	/*background-color: white;*/
+	overflow: hidden;
+}
+
+.about .deskripsi a:before{
+	content: '';
+	width: 1%;
+	height: 100%;
+	position: absolute;
+	/*background-color: var(--button-primary);*/
+	border: 2px solid var(--button-primary);
+	background-color: transparent;
+	left: 0;
+	top: 0;
+	transition: .3s;
+	border-radius: 10px;
+}
+
+.about .deskripsi a:hover:before{
+	width: 100%;
+}
+
+.about .gameplay {
+	/*background-color: orange;*/
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.about .gameplay .judul{
+	text-align: right;
+	font-weight: bold;
+	letter-spacing: .5em;
+	margin-bottom: 10px;
+}
+
+.about .gameplay iconify-icon{
+	color: var(--button-primary);
+}
+
+
+.about .gameplay .video{
+	border-right: 12px solid var(--button-secondary);
+}
+
+.menu{
+	display: flex;
+	background-color: rgba(0, 0, 0, .8);
+	background-image: url(../img/background.jpg);
+	background-size: cover;
+	justify-content: space-between;
+	border-bottom: 10px solid var(--button-primary);
+	position: relative;
+}
+
+.menu-kiri,
+.menu-kanan{
+	padding: 90px 50px 150px;
+	height: 100%;
+}
+
+.menu-kiri a,
+.menu-kanan a{
+	color: white;
+	display: block;
+	margin-top: 50px;
+	
+}
+
+.menu a .frame{
+	width: 400px;
+	height: 120px;
+	background-size: cover;
+	overflow: hidden;
+	transition: .3s;
+	display: flex;
+	flex-direction: column;
+}
+
+.menu .menu-kiri a .frame{
+	justify-content: end;
+}
+
+.menu-kiri a .frame{
+	border-left: 5px solid var(--button-primary);
+	transform: skewX(-8deg);
+}
+
+.menu-kiri a.royale-pass .frame{
+	background-image: url(../img/bacbali.jpg);
+
+}
+
+.menu-kiri a.yulia .frame {
+	background-image: url(../img/bacbali.jpg);
+}
+
+.menu-kiri a.tika .frame {
+	background-image: url(../img/bacbali.jpg);
+	
+}
+.menu-kiri a.olifiah .frame {
+	background-image: url(../img/bacbali.jpg);
+}
+.menu-kiri a.semua_gambar .frame {
+	background-image: url(../img/bacbali.jpg);
+}
+.menu-kiri a.tika .frame{
+	background-image: url(../img/bacbali.jpg);
+	background-position: center;
+	
+}
+.menu-kiri a.pusat-keamanan .frame{
+	background-image: url(../img/bacbali.jpg);
+}
+
+.menu-kiri a .frame .judul{
+	font-family: 'Poppins', sans-serif;
+	font-size: 1.6em;
+	font-weight: bold;
+	text-shadow: 1px 1px 15px black;
+	letter-spacing: .1em;
+}
+
+.menu-kiri a .frame .judul,
+.menu-kiri a .frame .deskripsi{
+	padding: 5px 15px;
+}
+
+.menu-kiri a .frame .judul,
+.menu-kiri a .frame .deskripsi{
+	transform: skewX(-8deg);
+}
+
+.menu-kiri a .frame .deskripsi{
+	position: relative;
+	background-color: rgba(0, 0, 0, .5);
+	backdrop-filter: blur(3px);
+}
+
+.menu-kanan .frame{
+	position: relative;
+	transform: skew(8deg);
+	border-right: 5px solid var(--button-primary);
+	text-align: right;
+	display: flex;
+	justify-content: space-between;
+	padding-right: 15px;
+}
+
+.menu-kanan a .frame{
+	background-size: cover;
+	background-position: center;
+}
+
+.menu-kanan a.esports .frame{
+	background-image: url("../img/bacbali.jpg");
+}
+
+.menu-kanan a.esports .frame img{
+	width: 50px;
+}
+
+.menu-kanan a.pdp .frame{
+	background-image: url("../img/bacbali.jpg");
+}
+
+.menu-kanan a.pdp .frame img{
+	width: 80px;
+}
+
+.menu-kanan a.next-star .frame{
+	background-image: url("../img/bacbali.jpg");}
+
+.menu-kanan a.next-star .frame img{
+	width: 120px;
+}
+
+
+
+
+.menu-kanan .logo,
+.menu-kanan .judul{
+	transform: skew(-8deg);
+	padding: 5px;
+}
+
+.menu-kanan .logo{
+	padding-top: 10px;
+}
+
+.menu-kanan .judul{
+	font-size: 1.5em;
+	font-weight: bold;
+	font-family: 'Poppins';
+}
+
+.menu-kanan .frame .gradasi{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to left, rgba(0, 0, 0, .5),rgba(0, 0, 0, 0));
+}
+
+.menu-kanan a .frame .deskripsi{
+	position: relative;
+	background-color: rgba(0, 0, 0, .5);
+	backdrop-filter: blur(3px);
+	
+}
+.menu-kiri a:hover .frame{
+	transform: translateY(-5px) skewX(-8deg);
+	box-shadow: 0 0 10px 1px var(--button-primary);
+}
+
+.menu-kanan a:hover .frame{
+	transform: translateY(-5px) skewX(8deg);
+	box-shadow: 0 0 10px 1px var(--button-primary);
+}
+
+.download{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	display: inline-flex;
+}
+
+.menu .download a{
+	padding: 10px 40px 0;
+	width: 300px;
+	color: black;
+	background-color: var(--button-primary);
+	clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+	display: flex;
+	justify-content: center;
+	font-weight: bold;
+	font-family: 'Poppins';
+}
+
+.menu .download iconify-icon{
+	font-size: 1.1em;
+}
+
+.menu .download span{
+	margin-left: 5px;}
+
+footer{
+	background-color: var(--background-secondary);
+	padding: 20px 50px 50px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1em;
+	color: white;
+}
+
+footer a{
+	color:  white;
+}
+
+footer a.partnership{
+	border:  1px solid var(--button-primary);
+	padding: 15px 20px;
+	border-radius: 6px;
+	color: var(--button-secondary);
+	font-weight: bold;
+	letter-spacing: 3px;
+	font-family: 'Poppins';
+}
+
+div.socialmedia{
+	display: flex;
+	gap:  1em;
+	width: fit-content;
+	margin-bottom: 50px;
+	margin-top: 5px;
+}
+
+div.socialmedia .social{
+	background-color: var(--background-primary);
+	border-radius: 3px;
+	padding: 10px;
+	color: white;
+	font-size: 1.5em;
+	display: flex;
+	align-items: center;
+}
+
+footer .logo img{
+	width: 600px;
+}
+
+
+footer p{
+	margin-bottom: 50px;
+	text-align: center;
+	color: rgba(255, 255, 255, .7);
+}
+
+div.privacy a{
+	padding: 0 15px;
+}
+
+div.privacy .policy{
+	border-right: 1px solid white;
+}
